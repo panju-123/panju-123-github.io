@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>moban</title>
+    <style>
+        body,h1,h2,h3,h4,h5,h6,ul,ol,p{margin:0;font-weight: normal}
+        ul,ol{padding:0; list-style:none;}
+        
+        #color div{
+            display: inline-block;
+            height:50px;
+            width:200px;          
+            text-align: center;
+            line-height: 50px;
+            font-size: 15px;
+            font-weight: bold;
+            margin:2px 10px 12px 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="color"></div>
+    <script>
+        let ocolor=document.getElementById("color"),
+            c=[];      
+        setInterval( function(){
+            for(let i=0;i<3;i++){
+                c[i]=Math.floor( Math.random() * 256 );
+            }            
+            color=`rgb(${c[0]},${c[1]},${c[2]})`;             
+            ocolor.innerHTML+=`<div style='background-color:${color} '> ${color} </div>`;                
+        } , 1500 );
+            
+
+
+    </script>
+</body>
+<ml>
